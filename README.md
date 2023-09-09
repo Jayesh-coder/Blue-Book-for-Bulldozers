@@ -1,61 +1,30 @@
-# Blue-Book-for-Bulldozers
-# Bluebook for Bulldozers - Kaggle Project
+# predicting the sale price of bulldozers using machine learning
 
-Welcome to the "Bluebook for Bulldozers" Kaggle project! This repository contains code, data, and documentation related to the Kaggle competition with the same name, where the goal is to predict the auction sale price of bulldozers using machine learning techniques.
+In this notebook, we're going to go through an example machine learning project with the goal of predicting the sale price of bulldozers.
 
-## Table of Contents
+## 1.Problem definition
 
-- [Introduction](#introduction)
-- [Dataset](#dataset)
-- [Notebooks](#notebooks)
-- [Getting Started](#getting-started)
-- [Submission](#submission)
-- [Acknowledgments](#acknowledgments)
+> How well can we predict the future sale price of a bulldozer, given its characteristics and previous examples of how much similar bulldozers have been sold for?
 
-## Introduction
+## 2.Data
 
-The objective of this Kaggle project is to predict the sale price of bulldozers at auction. This task is crucial for construction companies to make informed decisions about buying and selling heavy machinery. In this repository, you'll find various machine learning models and analysis that attempt to solve this prediction problem.
+The data is downloaded from Kaggle Bluebook for Bulldozers competition: https://www.kaggle.com/c/bluebook-for-bulldozers/data
 
-## Dataset
+There are 3 main datasets:
 
-The dataset for this project can be found on Kaggle [here](https://www.kaggle.com/c/bluebook-for-bulldozers/data). It includes detailed information about various bulldozers, such as their make, model, year, and other relevant attributes. The dataset is divided into training and testing sets, making it suitable for supervised machine learning tasks.
+- Train.csv is the training set, which contains data through the end of 2011.
+- Valid.csv is the validation set, which contains data from January 1, 2012 - April 30, 2012 You make predictions on this set throughout the majority of the competition. Your score on this set is used to create the public leaderboard.
+- Test.csv is the test set, which won't be released until the last week of the competition. It contains data from May 1, 2012 - November 2012. Your score on the test set determines your final rank for the competition.
 
-## Notebooks
+## 3.Evaluation
 
-To explore and contribute to this Kaggle project, you can use the provided Jupyter notebooks. Here's a brief overview of the notebooks available:
+The evaluation metric for this competition is the RMSLE (root mean squared log error) between the actual and predicted auction prices.
 
-- **1. Data Exploration**: This notebook explores the dataset, visualizes key features, and identifies patterns.
+For more on the evaluation of this project check: https://www.kaggle.com/competitions/bluebook-for-bulldozers/overview/evaluation
 
-- **2. Data Preprocessing**: In this notebook, we preprocess the data, handle missing values, and prepare it for model training.
+**Note:** The goal for the most regression evaluation metrics is to minimize the error. For example, our goal for this project will be to built a machine learningmodel which minimizes RMSLE.
 
-- **3. Model Training**: This notebook contains the code for training machine learning models, including regression models and ensemble methods.
+## 4.Features
 
-- **4. Model Evaluation**: Here, we evaluate the models using various metrics and techniques to assess their performance.
-
-- **5. Submission**: This notebook guides you on how to make predictions on the test dataset and create a Kaggle submission file.
-
-## Getting Started
-
-To get started with this Kaggle project, follow these steps:
-
-1. Download the dataset from [Kaggle](https://www.kaggle.com/c/bluebook-for-bulldozers/data) and place it in the `data` directory.
-
-2. Open the Jupyter notebooks in the `notebooks` directory and follow the instructions within each notebook.
-
-3. Experiment with different models, feature engineering, and hyperparameter tuning to improve your prediction accuracy.
-
-## Submission
-
-If you want to participate in the Kaggle competition, follow these steps to make a submission:
-
-1. Use the "Submission" notebook to predict bulldozer sale prices on the test dataset.
-
-2. Generate a submission file following the Kaggle competition's format.
-
-3. Submit your predictions on the Kaggle competition page.
-
-## Acknowledgments
-
-We would like to acknowledge Kaggle for hosting this competition and providing the dataset. We also thank the data science community for their contributions and discussions related to this project.
-
-If you have any questions or suggestions, please feel free to open an issue or reach out to the project contributors.
+Kaggle provides a data dictionary detailing all of the features of the dataset. You can view this data dictionary on Google Sheets:
+https://docs.google.com/spreadsheets/d/1fMYFHFsdjmCS-dfaqsd7tylwIltPTkxvRjWyW2XdzJU/edit?usp=sharing
