@@ -1,8 +1,6 @@
 # Blue-Book-for-Bulldozers
 # Bluebook for Bulldozers - Kaggle Project
 
-![Bulldozer Image](link_to_bulldozer_image.png)
-
 Welcome to the "Bluebook for Bulldozers" Kaggle project! This repository contains code, data, and documentation related to the Kaggle competition with the same name, where the goal is to predict the auction sale price of bulldozers using machine learning techniques.
 
 ## Table of Contents
